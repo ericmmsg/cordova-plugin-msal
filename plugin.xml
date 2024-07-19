@@ -46,6 +46,9 @@
         <config-file target="config.xml" parent="/*">
             <preference name="AndroidXEnabled" value="true" />
         </config-file>
+         <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+            <application android:allowBackup="false"/>
+        </edit-config>
         <source-file src="src/android/MsalPlugin.java" target-dir="src/com/wrobins/cordova/plugin" />
         <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
         <framework src="com.microsoft.identity.client:msal:5.1.0" />
